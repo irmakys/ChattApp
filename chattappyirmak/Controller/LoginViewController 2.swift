@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
     @IBAction func btnClickGiris(_ sender: UIButton) {
         Auth.auth().createUser(withEmail:emailTextField.text!, password:passwordTextField.text!) { user, error in
             if (error != nil ) { debugPrint ("Giriş Başarılı")
-                let vc = self.stoaryboard?.instantiateViewController(withIdentifier: "ChatID") as! ChatViewController
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChatID") as! WelcomViewController
                 self.navigationController?.pushViewController(vc, animated: true)
             } else{
                 debugPrint (error)

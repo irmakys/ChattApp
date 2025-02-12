@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class WelcomViewController: UIViewController {
 
@@ -26,4 +27,8 @@ class WelcomViewController: UIViewController {
     }
     */
 
+    @IBAction func btncikis(_ sender: UIBarButtonItem) {
+    
+    }
+    
 }

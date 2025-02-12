@@ -261,6 +261,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="btn_giris:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ItN-jQ-xgT"/>
+                                            <action selector="btnkayit:" destination="ieX-IP-SVU" eventType="touchUpInside" id="Obz-oJ-iH0"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -280,6 +281,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="iGV-dz-vSa"/>
                     <connections>
+                        <outlet property="emailregister" destination="NOM-7O-C7b" id="mOO-pe-o0h"/>
+                        <outlet property="passwordregister" destination="cbl-gN-VnS" id="o0f-CK-oJe"/>
+                        <outlet property="passwp" destination="cbl-gN-VnS" id="iUL-cY-wm3"/>
                         <segue destination="f9P-p7-4UO" kind="show" id="Ggv-3G-Xrb"/>
                     </connections>
                 </viewController>
@@ -290,7 +294,7 @@
         <!--Title-->
         <scene sceneID="2gv-VN-zKT">
             <objects>
-                <viewController storyboardIdentifier="ChatID" id="f9P-p7-4UO" customClass="ChatViewController" customModule="chattappyirmak" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatID" id="f9P-p7-4UO" customClass="WelcomViewController" customModule="chattappyirmak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WeJ-eA-FHX">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -304,6 +308,9 @@
                                     <navigationItem title="Canli Mesaj" id="2bU-5X-HRV">
                                         <barButtonItem key="rightBarButtonItem" title="Çıkış" id="LzX-j0-3Cg">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="btncikis:" destination="f9P-p7-4UO" id="Kho-5M-qc7"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -367,7 +374,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JFY-dM-MVJ"/>
+        <segue reference="Ggv-3G-Xrb"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemGrayColor"/>
     <resources>

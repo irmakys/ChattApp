@@ -21,13 +21,13 @@ class GirisViewController: UIViewController {
 
     @IBAction func btn_giris(_ sender: UIButton) {
         let vc =
-        stoaryboard.instantiateViewController(withIdentifier: "kayitID" )
+        stoaryboard.instantiateViewController(withIdentifier: "kayitID" ) as! RegisterViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func btn_kayıt(_ sender: UIButton) {
         let vc =
-        stoaryboard.instantiateViewController(withIdentifier: "girisID" )
+        stoaryboard.instantiateViewController(withIdentifier: "girisID" ) as! LoginViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

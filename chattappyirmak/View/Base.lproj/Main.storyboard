@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="chattappyirmak" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="chattappyirmak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,18 +98,18 @@
                     </view>
                     <navigationItem key="navigationItem" id="9dL-96-rnP"/>
                     <connections>
-                        <segue destination="yLr-OX-f3O" kind="show" id="f43-4N-BLo"/>
-                        <segue destination="ieX-IP-SVU" kind="show" id="Zle-1b-0E7"/>
+                        <segue destination="yLr-OX-f3O" kind="show" id="te8-AU-jGh"/>
+                        <segue destination="ieX-IP-SVU" kind="show" id="A8g-F3-544"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="657" y="85"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="Xyp-AW-g3a">
             <objects>
-                <viewController storyboardIdentifier="girisID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yLr-OX-f3O" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="girisID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yLr-OX-f3O" customClass="LoginViewController" customModule="chattappyirmak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wAa-Kd-l46">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,16 +131,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Kullanıcı bilgilerinizi giriniz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcM-lA-bAw">
-                                        <rect key="frame" x="25" y="28" width="263" height="45"/>
-                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="ZoV-nt-9uq"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3v-T6-9A9">
                                         <rect key="frame" x="108" y="259" width="97" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -160,9 +150,22 @@
                                             <color key="baseForegroundColor" systemColor="systemBlueColor"/>
                                         </buttonConfiguration>
                                         <connections>
+                                            <action selector="btnClickGiris:" destination="yLr-OX-f3O" eventType="touchUpInside" id="Hqj-Ag-huN"/>
+                                            <action selector="btnClickGiriş:" destination="yLr-OX-f3O" eventType="touchUpInside" id="7yk-aF-QfL"/>
+                                            <action selector="btnG:" destination="yLr-OX-f3O" eventType="touchUpInside" id="7an-q6-dA9"/>
                                             <action selector="btn_giris:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1dU-p1-sTD"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Kullanıcı bilgilerinizi giriniz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcM-lA-bAw">
+                                        <rect key="frame" x="25" y="28" width="263" height="45"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="ZoV-nt-9uq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -180,13 +183,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="i8E-iR-DTd"/>
                     <connections>
-                        <segue destination="f9P-p7-4UO" kind="show" id="9Uv-QI-0zL"/>
+                        <segue destination="f9P-p7-4UO" kind="show" id="JFY-dM-MVJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="njH-LY-yuE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="n8s-qC-gCt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="656" y="-696"/>
+            <point key="canvasLocation" x="2227" y="-708"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="328-Ch-meb">
@@ -199,18 +202,17 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="b8x-C1-Pji"/>
-                        <segue destination="BYZ-38-t0r" kind="show" id="zxO-EC-SM7"/>
+                        <segue destination="BYZ-38-t0r" kind="show" id="xzW-mJ-twE"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eUQ-yR-0qZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-581" y="101"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="QfU-Vy-w7V">
             <objects>
-                <viewController storyboardIdentifier="kayitID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ieX-IP-SVU" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="kayitID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ieX-IP-SVU" customClass="RegisterViewController" customModule="chattappyirmak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gU2-Nz-IUp">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -278,17 +280,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="iGV-dz-vSa"/>
                     <connections>
-                        <segue destination="f9P-p7-4UO" kind="show" id="3jE-bQ-lUv"/>
+                        <segue destination="f9P-p7-4UO" kind="show" id="Ggv-3G-Xrb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6PH-cD-EEw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="656" y="1068"/>
+            <point key="canvasLocation" x="2228" y="763"/>
         </scene>
         <!--Title-->
         <scene sceneID="2gv-VN-zKT">
             <objects>
-                <viewController storyboardIdentifier="ChatID" id="f9P-p7-4UO" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatID" id="f9P-p7-4UO" customClass="ChatViewController" customModule="chattappyirmak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WeJ-eA-FHX">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -361,12 +363,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xFq-mX-toi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2733.5877862595421" y="100.70422535211269"/>
+            <point key="canvasLocation" x="3653" y="58"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9Uv-QI-0zL"/>
-        <segue reference="zxO-EC-SM7"/>
+        <segue reference="JFY-dM-MVJ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemGrayColor"/>
     <resources>

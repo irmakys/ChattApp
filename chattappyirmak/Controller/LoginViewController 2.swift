@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
@@ -21,6 +23,19 @@ class LoginViewController: UIViewController {
     }
     
 
+    @IBAction func btnClickGiris(_ sender: UIButton) {
+        Auth.auth().createUser(withEmail:emailTextField.text!, password:passwordTextField.text!) { user, error in
+            if (error != nil ) { debugPrint ("Giriş Başarılı")
+                let vc = self.stoaryboard?.instantiateViewController(withIdentifier: "ChatID") as! ChatViewController
+                self.navigationController?.pushViewController(vc, animated: true)
+            } else{
+                debugPrint (error)
+            }
+            
+            
+        }
+        
+    }
     /*
     // MARK: - Navigation
 

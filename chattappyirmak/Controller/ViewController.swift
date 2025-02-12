@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GirisViewController: UIViewController {
     
     //PROPERTİES
     let stoaryboard = UIStoryboard(name: "Main", bundle: nil)
